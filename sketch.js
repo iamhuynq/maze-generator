@@ -21,21 +21,22 @@ function setup() {
 
 function draw() { 
     background(51);
-    for (let i = 0; i < grid.length; i++) {
-        grid[i].show();
-    }
-    current.visited = true;
-    current.highlight();
-    var next = current.checkNeighbors();
-    if(next){
-        next.visited = true;
-        stack.push(current);
-        removeWalls(current, next);
-        current = next;
-    } else if (stack.length > 0){
-        var cell = stack.pop();
-        current = cell;
-    }
+    // for (let i = 0; i < grid.length; i++) {
+    //     grid[i].show();
+    // }
+    // current.visited = true;
+    // current.highlight();
+    // var next = current.checkNeighbors();
+    // if(next){
+    //     next.visited = true;
+    //     stack.push(current);
+    //     removeWalls(current, next);
+    //     current = next;
+    // } else if (stack.length > 0){
+    //     var cell = stack.pop();
+    //     current = cell;
+    // }
+    console.log('draw');
 }
 
 function index(i, j) {
